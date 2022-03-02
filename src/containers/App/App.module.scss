@@ -1,0 +1,10 @@
+@import "../../scss/imports.scss";
+
+.app {
+  min-height: 100vh;
+  background-color: $dark;
+  color: $light;
+  
+  &__main {
+  }
+}
