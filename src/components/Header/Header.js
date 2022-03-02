@@ -64,32 +64,17 @@ function Header() {
 
         <nav className={`${styles.header__content__nav} ${menuOpen && size.width < 992 ? styles.isMenu : ''}`}>
           {/* Scrollspy (ul) is used for highlighting the current page in navigation  */}
-          <Scrollspy items={['home', 'about', 'services', 'portfolio', 'contact']} offset={-80} currentClassName={styles.active}>
+          <Scrollspy items={['home']} offset={-80} currentClassName={styles.active}>
             <li>
               <Link to="/" onClick={menuToggleHandler} replace={true}>
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="#about" onClick={menuToggleHandler} replace={true}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="#services" onClick={menuToggleHandler} replace={true}>
-                Service
-              </Link>
-            </li>
-            <li>
-              <Link to="#portfolio" onClick={menuToggleHandler} replace={true}>
-                Portfolio
-              </Link>
-            </li>
           </Scrollspy>
 
           {/* Contact button link */}
-          <Link to="#contact" className={styles.header__content__nav__button} onClick={menuToggleHandler} replace={true}>
-            Contact Me
+          <Link to="#linktopage" className={styles.header__content__nav__button} onClick={menuToggleHandler} replace={true}>
+            Button
           </Link>
         </nav>
 
