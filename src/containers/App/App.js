@@ -1,12 +1,12 @@
+import Header from '../../components/Header/Header';
+import Home from '../Home/Home';
 import styles from './App.module.scss';
 
 function App() {
   return (
     <div className={styles.app}>
-      <main className={styles.app__main}>
-        <h1>React App!</h1>
-        <p>React App!</p>
-      </main>
+      <Header />
+      <Home />
     </div>
   );
 }
