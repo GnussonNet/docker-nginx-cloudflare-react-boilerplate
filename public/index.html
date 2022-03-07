@@ -15,13 +15,20 @@
     <meta name="description" content="React App" />
     <meta name="application-name" content="React App" />
     <meta name="apple-mobile-web-app-title" content="React App" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" as="font" rel="stylesheet" />
     <title>React App</title>
   </head>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
     .fallback {
       opacity: 0;
       font-family: 'Nunito', sans-serif;
@@ -32,14 +39,11 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      gap: 1.5rem;
       animation: fadeIn 0.5s ease-in 1s forwards;
     }
-
     .loader {
       width: 3rem;
       height: 3rem;
-      position: relative;
       border: 0.35rem solid #000;
       animation: loader 3s infinite ease;
     }
@@ -53,6 +57,8 @@
     .text {
       font-size: 1.3rem;
       font-weight: 500;
+      padding: 0;
+      margin-block: 2rem 0.5rem;
     }
     @keyframes fadeIn {
       0% {
@@ -83,7 +89,6 @@
         transform: rotate(360deg);
       }
     }
-
     @keyframes loader-inner {
       0% {
         height: 0%;
@@ -107,13 +112,13 @@
     }
   </style>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div class="fallback">
         <div class="loader">
           <div class="loader_inner"></div>
         </div>
-        <p class="text">Loading page...</p>
+        <p class="text">Loading page..</p>
+        <noscript> Your browser does not support JavaScript! </noscript>
       </div>
     </div>
   </body>
