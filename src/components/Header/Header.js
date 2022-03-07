@@ -10,6 +10,7 @@ import Logo from '../../assets/svgs/logo.svg';
 import styles from './Header.module.scss';
 
 function Header() {
+  // const [isImageLoaded, setIsImageLoaded] = useState(false);
   // Used for detecting url changes and removing the #anchor
   const location = useLocation();
 
@@ -52,6 +53,20 @@ function Header() {
     window.history.replaceState(null, '', '/');
   }, [location]);
 
+  // useEffect(() => {
+  //   const image = new Image();
+  //   image.onload = () => setIsImageLoaded(true);
+  //   image.src = Logo;
+
+  //   return () => {
+  //     image.onload = null;
+  //   };
+  // }, []);
+
+  // if (!isImageLoaded) {
+  //   return null;
+  // }
+
   return (
     // Animates from the top with opacity
     <motion.header initial="hidden" animate="visible" variants={{ visible: { opacity: 1, translateY: 0, transition: { delay: 0.3 } }, hidden: { opacity: 0, translateY: -64 } }} className={styles.header}>
@@ -59,7 +74,7 @@ function Header() {
         {/* Logo with text */}
         <Link to="/" replace={true} className={styles.header__content__logo}>
           <img src={Logo} alt="" />
-          <p>Gnusson.net</p>
+          <p>React App</p>
         </Link>
 
         <nav className={`${styles.header__content__nav} ${menuOpen && size.width < 992 ? styles.isMenu : ''}`}>
