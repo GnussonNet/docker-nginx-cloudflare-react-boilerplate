@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: react-dev
     ports:
       - "3000:3000"
     volumes:
