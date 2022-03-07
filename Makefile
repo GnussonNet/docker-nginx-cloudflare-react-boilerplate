@@ -9,3 +9,6 @@ build-prod:
 
 stop-prod:
 	docker-compose -f docker-compose.prod.yml down -v --rmi local
+
+build-container:
+	docker-compose -f docker-compose.prod.yml up --no-start
