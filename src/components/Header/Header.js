@@ -10,7 +10,6 @@ import Logo from '../../assets/svgs/logo.svg';
 import styles from './Header.module.scss';
 
 function Header() {
-  // const [isImageLoaded, setIsImageLoaded] = useState(false);
   // Used for detecting url changes and removing the #anchor
   const location = useLocation();
 
@@ -52,20 +51,6 @@ function Header() {
   useEffect(() => {
     window.history.replaceState(null, '', '/');
   }, [location]);
-
-  // useEffect(() => {
-  //   const image = new Image();
-  //   image.onload = () => setIsImageLoaded(true);
-  //   image.src = Logo;
-
-  //   return () => {
-  //     image.onload = null;
-  //   };
-  // }, []);
-
-  // if (!isImageLoaded) {
-  //   return null;
-  // }
 
   return (
     // Animates from the top with opacity
