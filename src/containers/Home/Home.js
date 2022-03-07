@@ -8,7 +8,7 @@ function Home() {
         React App!
       </motion.h1>
       <motion.p initial="hidden" animate="visible" variants={{ visible: { opacity: 1, translateY: 0, transition: { delay: 1 } }, hidden: { opacity: 0, translateY: 10 } }}>
-        Test
+        This is a docker nginx react boilerplate
       </motion.p>
     </section>
   );
