@@ -1,1 +1,1 @@
-# Docker Nginx Cloudflare React Boilerplate
+# Docker Nginx React Boilerplate
