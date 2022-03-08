@@ -17,5 +17,5 @@ jobs:
     - name: Prebuild Docker Container
       run: make prebuild
       
-    - name: push Docker Container
+    - name: Push Docker Container to GitHub Packages
       run: make push
