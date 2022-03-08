@@ -10,5 +10,8 @@ build-prod:
 stop-prod:
 	docker-compose -f docker-compose.prod.yml down -v --rmi local
 
-build-container:
+prebuild:
 	docker-compose -f docker-compose.prod.yml up --no-start
+
+push:
+	docker-compose -f docker-compose.prod.yml push
